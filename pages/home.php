@@ -13,4 +13,14 @@
   </div>
 </div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="menu-bar col">
+      <div class="menu-bar-itm">Mobile devices</div>
+      <div class="menu-bar-itm">Desktop devices</div>
+      <div class="menu-bar-itm">Other devices</div>
+    </div>
+  </div>
+</div>
+
 <?php wrapper_bottom(); ?>
