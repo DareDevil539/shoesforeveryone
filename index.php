@@ -6,7 +6,8 @@ if ($_SERVER['REDIRECT_URL']=='/') {
 } else {
     $page=substr($_SERVER['REDIRECT_URL'], 1);
     if (!preg_match('/^[A-z0-9]{3,15}$/', $page)) {
-        exit('error url');
+        include 'pages/errors/errorurl.php';
+        exit;
     }
 }
 
