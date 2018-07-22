@@ -13,4 +13,6 @@ if (!$mysqli) {
     echo "I can`t connect to the database!<br/>";
     echo mysqli_connect_error() . PHP_EOL;
     exit;
+} else {
+    mysqli_query($mysqli, "SET NAMES utf8");
 }
