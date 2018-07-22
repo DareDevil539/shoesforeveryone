@@ -1,6 +1,9 @@
 $("document").ready(function() {
-  $("menu-itm").mouseover(function() {
-    alert('tut');
-    // $(this).find("a").css("color", "#fff");
+  $(".menu .menu-itm").mouseover(function() {
+    $(this).children().css("color", "#333")
+  });
+
+  $(".menu .menu-itm").mouseout(function() {
+    $(this).children().css("color", "#efefef")
   });
 });
