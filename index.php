@@ -1,5 +1,6 @@
 <?php
 require 'includes/config.php';
+require 'includes/db.php';
 
 if ($_SERVER['REDIRECT_URL']=='/') {
     $page='home';
