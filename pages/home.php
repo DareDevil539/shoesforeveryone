@@ -14,37 +14,49 @@
     </div>
   </div>
 
+  <?php $categories = mysqli_query($mysqli, "SELECT * FROM `categories`"); ?>
+
   <div class="container-fluid">
     <div class="row">
       <div class="menu-bar col">
-        <div class="menu-bar-itm col"><a href="#">Mobile devices</a></div>
-        <div class="menu-bar-itm col"><a href="#">Desktop devices</a></div>
-        <div class="menu-bar-itm col"><a href="#">Other devices</a></div>
+        <?php
+        while ($category = mysqli_fetch_assoc($categories)) {
+            ?>
+          <div class="menu-bar-itm col"><a href="/categories?id=<?php echo $category['id'] ?>" target="_blank"><?php echo $category['name']; ?></a></div>
+        <?php
+        }
+        ?>
       </div>
     </div>
   </div>
 </header>
 
+<?php $articles = mysqli_query($mysqli, "SELECT * FROM `articles` ORDER BY `id` DESC"); ?>
+
+
 <main>
   <div class="container">
     <div class="row">
+      <?php while ($article = mysqli_fetch_assoc($articles)) {
+            ?>
       <div class="col-wr">
         <div class="flipcard">
           <div class="front">
-            <img src="/img/art.jpg" alt="icon" class="top">
-            <h4 class="flip-title">Electric teapot Picola PSK-003</h5>
-            <div class="alert alert-primary" role="alert">
-              $24.99
+            <div class="top-img" style="background-image: url(/img/<?php echo $article['image']; ?>)"></div>
+            <h4 class="flip-title"><?php echo $article['type'] . ' ' . $article['brand'] . ' ' . $article['model']; ?></h5>
+              <div class="alert alert-primary" role="alert"><?php echo '$' . $article['price']; ?></div>
+            </div>
+            <div class="back">
+              <div class="top-img" style="background-image: url(/img/<?php echo $article['image']; ?>)"></div>
+              <h4 class="flip-title"> <?php echo $article['type'] . ' ' . $article['brand'] . ' ' . $article['model']; ?></h5>
+              <p><?php echo mb_substr($article['description'], 0, 150, 'utf8') . '...'; ?></p>
+              <div class="alert alert-primary" role="alert"><?php echo '$' . $article['price']; ?></div>
+              <a href="/articles?id=1" class="btn btn-primary" target="_blank">Details</a>
             </div>
           </div>
-          <div class="back">
-            <img src="/img/art.jpg" alt="icon" class="top">
-            <h4 class="flip-title">Electric teapot Picola PSK-003</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias asperiores doloremque, repellendus quisquam veritatis, numquam placeat tempore quidem! Illum cupiditate eum rem maxime tenetur nam praesentium, suscipit eos vitae optio.</p>
-            <a href="#" class="btn btn-primary">Buy!</a>
-          </div>
         </div>
-      </div>
+    <?php
+        } ?>
     </div>
   </div>
 </main>
