@@ -11,6 +11,50 @@ body {
   background-color: #30a3ec;
 }
 
+.header-hidden {
+  display: flex;
+  height: 200px;
+  background-color: #30a3ec;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.menu-hidden {
+  position: absolute;
+  width: 100%;
+}
+
+.m-h-item {
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+
+.menu-hidden .m-h-item:hover {
+  background-color: #efefef;
+  transition: all.6s ease;
+}
+
+.menu-hidden .m-h-item:not(:hover) {
+  transition: all.6s ease;
+}
+
+.m-h-item a {
+  text-decoration: none;
+  color: #efefef;
+  font-weight: bold;
+}
+
 .logo {
   margin: 5px 0;
 }
@@ -46,6 +90,14 @@ body {
 
 .active-menu {
   background-color: #fff;
+}
+
+.hidden-h {
+  display: none;
+}
+
+.hidden-v {
+  opacity: 0;
 }
 
 .menu-bar {
@@ -160,12 +212,12 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 450px;
   margin: 10px 0 20px 0;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 20px;
 }
 
 .art-title, .art-description {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .buy {
@@ -175,7 +227,7 @@ body {
 
 .form-buy {
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
   display: -webkit-flex;
   display: -ms-flex;
@@ -214,4 +266,37 @@ body {
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
+}
+
+.art-price {
+  margin: 30px 30% 0 30%;
+  text-align: center;
+}
+
+.t-but {
+  
+}
+
+@media only screen and (max-width: 1199px) {
+  .row {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .row {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .menu-bar {
+    height: 200px;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .col-wr {
+    margin-left: 0;
+  }
 }
