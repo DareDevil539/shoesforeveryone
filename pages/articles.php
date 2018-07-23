@@ -11,12 +11,17 @@ wrapper_top($artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']
   <article>
     <div class="container">
       <div class="row">
-        <div class="col-5">
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
           <div class="art-img" style="background-image: url(/img/<?php echo $artName['image']; ?>);"></div>
         </div>
         <div class="col-6 offset-1">
-          <h3 class="art-title"><?php echo $artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']; ?></h5>
-          <p class="art-description"><?php echo $artName['description']; ?></p>
+          <h3 class="art-title"><?php echo $artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']; ?></h3>
+          <div class="alert alert-primary art-price" role="alert">
+            <?php echo '$' . $artName['price']; ?>
+          </div>
+          <p class="art-description">
+            <?php echo $artName['description']; ?>
+          </p>
         </div>
       </div>
     </div>
@@ -26,7 +31,8 @@ wrapper_top($artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']
     <div class="container">
       <div class="row">
         <div class="form-buy col-6 offset-3">
-          <div class="form-title"><h5>Quick buy!</h5></div>
+          <div class="form-title">
+            <h5>Quick buy!</h5></div>
           <form method="GET">
             <label for="name">Your name</label>
             <input type="text" placeholder="Your name" id="name" name="name">
@@ -49,27 +55,27 @@ wrapper_top($artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']
   <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 
   <script>
-  $("document").ready(function() {
-  $(".subm").click(function() {
-    if ($("#name").val() != '' && $("#email").val() != '' && $("#address").val() != '') {
-      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(String($("#email").val()).toLowerCase())) {
-        window.open("/buy?name=" + $("#name").val() + "&email=" + $("#email").val() + '&address=' + $("#address").val(), "_self");
-      } else {
-        swal(
-          'Oops..',
-          'You wrote incorrect email!',
-          'error'
-        );
-      }
-    } else {
-      swal(
-        'Oops..',
-        'You don`t fill the form!',
-        'error'
-      );
-    }
-  });
-});
+    $("document").ready(function() {
+      $(".subm").click(function() {
+        if ($("#name").val() != '' && $("#email").val() != '' && $("#address").val() != '') {
+          if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(String($("#email").val()).toLowerCase())) {
+            window.open("/buy?name=" + $("#name").val() + "&email=" + $("#email").val() + '&address=' + $("#address").val(), "_self");
+          } else {
+            swal(
+              'Oops..',
+              'You wrote incorrect email!',
+              'error'
+            );
+          }
+        } else {
+          swal(
+            'Oops..',
+            'You don`t fill the form!',
+            'error'
+          );
+        }
+      });
+    });
   </script>
 
   <?php wrapper_bottom(); ?>
