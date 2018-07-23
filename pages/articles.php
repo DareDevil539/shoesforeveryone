@@ -52,7 +52,15 @@ wrapper_top($artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']
   $("document").ready(function() {
   $(".subm").click(function() {
     if ($("#name").val() != '' && $("#email").val() != '' && $("#address").val() != '') {
-      window.open("/buy?name=" + $("#name").val() + "&email=" + $("#email").val() + '&address=' + $("#address").val(), "_self");
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(String($("#email").val()).toLowerCase())) {
+        window.open("/buy?name=" + $("#name").val() + "&email=" + $("#email").val() + '&address=' + $("#address").val(), "_self");
+      } else {
+        swal(
+          'Oops..',
+          'You wrote incorrect email!',
+          'error'
+        );
+      }
     } else {
       swal(
         'Oops..',
