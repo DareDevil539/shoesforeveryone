@@ -7,13 +7,13 @@
           <div class="menu-itm col"><a href="/home">home</a></div>
           <div class="menu-itm col offset-1"><a href="/about">about</a></div>
           <div class="menu-itm col offset-1"><a href="/contact">contact us</a></div>
-          <div class="t-but hidden-h" style="flex-direction: flex-end;">serus</div>
+          <div class="t-but menu-itm hidden-h">serus</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="header-hidden hidden-h">
+  <div class="header-hidden">
     <div class="menu-hidden">
       <div class="m-h-item"><a href="/home">home</a></div>
       <div class="m-h-item"><a href="/about">about</a></div>
