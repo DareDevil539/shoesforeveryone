@@ -2,12 +2,12 @@
   <div class="container-fluid">
     <div class="row">
       <div class="header col-12">
-        <div class="logo col-3"><img src="img/logo.svg" alt="Logo" height="90px"></div>
+        <div class="logo col-3"><img src="img/logo.svg" alt="Logo" height="90"></div>
         <div class="menu col-5 offset-4">
           <div class="menu-itm col"><a href="/home">home</a></div>
           <div class="menu-itm col offset-1"><a href="/about">about</a></div>
           <div class="menu-itm col offset-1"><a href="/contact">contact us</a></div>
-          <div class="t-but menu-itm hidden-h">serus</div>
+          <a href="#" class="t-but menu-itm"><span></span></a>
         </div>
       </div>
     </div>
