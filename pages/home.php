@@ -4,7 +4,7 @@
 
 <?php $articles = mysqli_query($mysqli, "SELECT * FROM `articles` ORDER BY `id` DESC"); ?>
 
-<div class="label-cat">Last added:</div>
+<div class="label-cat">last added:</div>
 
 <?php require 'includes/main.php'; ?>
 
