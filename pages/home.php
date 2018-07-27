@@ -8,12 +8,4 @@
 
 <?php require 'includes/main.php'; ?>
 
-<footer>
-  <div class="container-fluid">
-    <div class="row">
-
-    </div>
-  </div>
-</footer>
-
-<?php wrapper_bottom(); ?>
+<?php require 'includes/footer.php'; wrapper_bottom(); ?>

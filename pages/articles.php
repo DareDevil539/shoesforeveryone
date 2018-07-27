@@ -11,17 +11,19 @@ wrapper_top($artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']
   <article>
     <div class="container">
       <div class="row">
-        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
-          <div class="art-img" style="background-image: url(/img/<?php echo $artName['image']; ?>);"></div>
-        </div>
-        <div class="col-6 offset-1">
-          <h3 class="art-title"><?php echo $artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']; ?></h3>
-          <div class="alert alert-primary art-price" role="alert">
-            <?php echo '$' . $artName['price']; ?>
+        <div class="art">
+          <div class="art-top">
+            <div class="art-img" style="background-image: url(/img/<?php echo $artName['image']; ?>);"></div>
           </div>
-          <p class="art-description">
-            <?php echo $artName['description']; ?>
-          </p>
+          <div class="art-side">
+            <h3 class="art-title"><?php echo $artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']; ?></h3>
+            <div class="alert alert-primary art-price" role="alert">
+              <?php echo '$' . $artName['price']; ?>
+            </div>
+            <p class="art-description">
+              <?php echo $artName['description']; ?>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -78,4 +80,4 @@ wrapper_top($artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']
     });
   </script>
 
-  <?php wrapper_bottom(); ?>
+  <?php require 'includes/footer.php'; wrapper_bottom(); ?>

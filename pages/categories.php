@@ -12,4 +12,4 @@ wrapper_top('All goods in category ' . $catName['name']);
 
 <?php require 'includes/main.php'; ?>
 
-<?php wrapper_bottom(); ?>
+<?php require 'includes/footer.php'; wrapper_bottom(); ?>
