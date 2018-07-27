@@ -1,5 +1,11 @@
 * {
+  margin: 0;
+  padding: 0;
   font-family: "Century Gothic", sans-serif;
+}
+
+body {
+  background-color: #efefef;
 }
 
 .header {
@@ -287,6 +293,81 @@
 .label-cat {
   margin: 30px 0 20px 30px;
   text-transform: capitalize;
+}
+
+.anCard {
+  background-color: #fff;
+  width: 300px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 35px 20px 35px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.top-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 235px;
+  -webkit-background-size: 100% 235px;
+  background-size: 100% 235px;
+}
+
+.anCard:hover .top-img {
+  opacity: 0.6;
+  -webkit-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  height: 100px;
+}
+
+.card-body {
+  position: absolute;
+  top: 300px;
+}
+
+.card-title {
+  cursor: default;
+}
+
+.card-price {
+  margin: 20px 50px;
+  background-color: #0288D1;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: default;
+}
+
+.card-price:hover {
+  background-color: #03A9F4;
+}
+
+.card-desc {
+  opacity: 0;
+}
+
+.anCard:hover .card-body {
+  top: 135px;
+}
+
+.anCard:hover .card-desc {
+  opacity: 1;
+}
+
+.card-desc, .card-price, .card-body, .top-img {
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
 @media only screen and (min-width: 768px) {
