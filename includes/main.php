@@ -19,7 +19,7 @@
                 <?php echo mb_substr($article['description'], 0, 100) . '...'; ?>
               </p>
             </div>
-            <a href="/articles?id=<?php echo $article['id']; ?>" class="btn btn-primary" target="_blank">Details</a>
+            <a href="/articles?id=<?php echo $article['id']; ?>" class="btn btn-primary">Details</a>
           </div>
         </div>
       </div>
