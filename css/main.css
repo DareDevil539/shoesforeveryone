@@ -443,7 +443,7 @@ footer {
 }
 
 .art-top {
-  width: 50%;
+  width: 45%;
   height: 450px;
   position: relative;
 }
@@ -462,7 +462,7 @@ footer {
 
 .art-side {
   position: relative;
-  width: 50%;
+  width: 55%;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -546,11 +546,11 @@ footer {
   }
 
   .art-top {
-    width: 60%;
+    width: 65%;
   }
 
   .art-side {
-    width: 40%;
+    width: 35%;
   }
 }
 
@@ -625,7 +625,6 @@ footer {
     justify-content: center;
     -ms-align-items: center;
     align-items: center;
-    text-align: center;
   }
 
   .art-top {
@@ -633,13 +632,26 @@ footer {
   }
 
   .art-side {
-    margin-left: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form-buy, .art-title, .art-description {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .art-top {
     height: 235px;
+  }
+
+  .buy input {
+    width: 200px;
   }
 
   .social img {
