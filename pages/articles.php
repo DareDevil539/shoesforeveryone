@@ -32,7 +32,7 @@ wrapper_top($artName['type'] . ' ' . $artName['brand'] . ' ' . $artName['model']
   <div class="buy">
     <div class="container">
       <div class="row">
-        <div class="form-buy col-6 offset-3">
+        <div class="form-buy col-md-6 offset-md-3 col-sm-8 offset-sm-2">
           <div class="form-title">
             <h5>Quick buy!</h5></div>
           <form method="GET">
