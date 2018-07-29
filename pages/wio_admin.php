@@ -1,11 +1,16 @@
-<?php wrapper_top('Admin\'s panel'); ?>
+<?php wrapper_top('Admin\'s panel');
+require 'includes/db.php'; ?>
 
 <?php
-if ($_POST['username'] === '' && $_POST['password'] === '') {
-    echo "Incorrect login and password!<br />";
-    echo "<a href=\"admin\">Return!</a>";
+$admin_q = mysqli_query($mysqli, "SELECT `username`, `password` FROM `wio_admin`");
+
+$admin = mysqli_fetch_assoc($admin_q);
+
+if ($_POST['username'] === $admin['username'] && md5($_POST['password']) === $admin['password']) {
+    echo "Success!";
 } else {
-    var_dump($_POST);
+    echo "Incorrect login or password!<br />";
+    echo "<a href=\"admin\">Return!</a>";
 }
 ?>
 
