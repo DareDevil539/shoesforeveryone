@@ -1,2 +1,2 @@
 # TENTech
-This web-site will be create for my own porfolio
+This web-site was created for my own portfolio
